@@ -2,8 +2,8 @@
 
 namespace Reallyli\Options\Console;
 
-use Reallyli\Options\Option as Option;
 use Illuminate\Console\Command;
+use Reallyli\Options\Facade\Option;
 
 class OptionSetCommand extends Command
 {

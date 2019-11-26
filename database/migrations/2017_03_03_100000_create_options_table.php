@@ -15,10 +15,10 @@ class CreateOptionsTable extends Migration
     {
         Schema::create('options', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('module', 40)->index()->nullable();
             $table->string('key')->unique();
             $table->text('value');
             $table->string('comment')->nullable();
-            $table->string('module', 40)->index()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

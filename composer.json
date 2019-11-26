@@ -1,0 +1,52 @@
+{
+    "name": "reallyli/laravel-module-options",
+    "description": "Kv storage based on modular development",
+    "keywords": [
+        "laravel-module-options",
+        "key-value storage from database"
+    ],
+    "homepage": "https://github.com/reallyli/laravel-module-options",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "reallyli",
+            "email": "zlisreallyli@outlook.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "illuminate/support": "^5.4|^6.0",
+        "illuminate/database": "^5.4|^6.0"
+    },
+    "require-dev": {
+        "orchestra/database": "^3.7",
+        "orchestra/testbench": "~3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Reallyli\\Options\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Reallyli\\Options\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Reallyli\\Options\\OptionsServiceProvider"
+            ],
+            "aliases": {
+                "Option": "Reallyli\\Options\\Facade\\Option"
+            }
+        }
+    }
+}

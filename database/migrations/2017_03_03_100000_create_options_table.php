@@ -21,7 +21,7 @@ class CreateOptionsTable extends Migration
             $table->string('comment')->nullable();
             $table->timestamps();
             $table->softDeletes();
-            $table->index(['module', 'key']);
+            $table->unique(['module', 'key']);
         });
     }
 
